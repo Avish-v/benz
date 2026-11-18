@@ -1,0 +1,12 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; }
+body { @apply bg-ivory text-cocoa font-sans antialiased; overflow-x: hidden; }
+section[id] { scroll-margin-top: 4.5rem; }
+.gold-text { background: linear-gradient(100deg,#B98B4B,#F1DDB0 45%,#D4AF7A 70%,#B98B4B); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium uppercase tracking-[0.18em] transition-all duration-300; }
+.btn-gold { @apply bg-gold text-wine hover:bg-[#E6C98F] hover:shadow-[0_0_30px_rgba(212,175,122,.5)]; }
+.btn-ghost { @apply border border-gold/70 text-ivory hover:bg-gold/15; }
+.eyebrow { @apply text-xs uppercase tracking-[0.35em] text-gold; }
+.h2 { @apply font-display text-4xl md:text-6xl font-medium leading-tight; }
+.field { @apply w-full rounded-xl border border-gold/40 bg-white/70 px-4 py-3 outline-none transition focus:border-burgundy focus:ring-2 focus:ring-burgundy/20; }
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; scroll-behavior:auto!important; } }
