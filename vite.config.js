@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 export default defineConfig({
+  base: process.env.VITE_BASE_PATH || '/',
   plugins: [react()],
   build: { rollupOptions: { output: { manualChunks: { three: ['three', '@react-three/fiber'], motion: ['framer-motion', 'gsap'] } } } }
 })

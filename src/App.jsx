@@ -13,10 +13,23 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Silk from './components/Silk'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
+import Admin from './components/Admin'
+import Reviews from './components/Reviews'
+import { StudioDataProvider } from './context/StudioData'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function App() {
+  return (
+    <StudioDataProvider>
+      {window.location.pathname.replace(/\/+$/, '').endsWith('/admin')
+        ? <Admin />
+        : <PublicSite />}
+    </StudioDataProvider>
+  )
+}
+
+function PublicSite() {
   const [loading, setLoading] = useState(true)
   useEffect(() => { const t = setTimeout(() => setLoading(false), 2200); return () => clearTimeout(t) }, [])
   useEffect(() => { if (!loading) setTimeout(() => ScrollTrigger.refresh(), 100) }, [loading])
@@ -32,6 +45,8 @@ export default function App() {
         <Gallery />
         <Silk fill="#F4D9D6" flip />
         <About />
+        <Silk fill="#3E0713" />
+        <Reviews />
         <Silk fill="#FAF3E8" />
         <Booking />
         <Contact />

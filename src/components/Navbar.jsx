@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
 import { SITE } from '../config/site'
 
-const LINKS = [['home', 'Home'], ['services', 'Services'], ['gallery', 'Gallery'], ['about', 'About'], ['booking', 'Book'], ['contact', 'Contact']]
+const LINKS = [['home', 'Home'], ['services', 'Services'], ['gallery', 'Gallery'], ['about', 'About'], ['reviews', 'Reviews'], ['booking', 'Book'], ['contact', 'Contact']]
 export const goTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
 export default function Navbar() {

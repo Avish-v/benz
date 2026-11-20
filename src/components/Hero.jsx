@@ -41,7 +41,7 @@ export default function Hero({ ready }) {
           <WordReveal text="Artistry." className="gold-text italic" animate={ready} delay={0.8} />
         </h1>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={ready ? { opacity: 1, y: 0 } : {}} transition={{ delay: 1.3, duration: 0.8 }}
-          className="mt-6 text-sm uppercase tracking-[0.3em] text-blush sm:text-base">Makeup | Mehendi | Saree Styling</motion.p>
+          className="mt-6 text-sm uppercase tracking-[0.3em] text-blush sm:text-base">Bridal Makeup | Mehendi | Saree Pleating | Hairstyle | Saree Draping</motion.p>
         <motion.p initial={{ opacity: 0 }} animate={ready ? { opacity: 1 } : {}} transition={{ delay: 1.6 }} className="mt-3 font-display text-xl italic text-gold">{SITE.tagline}</motion.p>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={ready ? { opacity: 1, y: 0 } : {}} transition={{ delay: 1.8 }} className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <button className="btn btn-gold" onClick={() => goTo('services')}>Explore Services</button>
